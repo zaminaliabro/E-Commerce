@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>E‑Commerce</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h2 class="logo">ShopNow</h2>
+
+      <input type="text" id="search" placeholder="Search products..." />
+
+      <div class="cart-btn" onclick="toggleCart()">
+        🛒 <span id="cartCount">0</span>
+      </div>
+    </nav>
+
+    <section class="products" id="products"></section>
+
+    <div class="cart" id="cart">
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <p class="total">Total: Rs <span id="total">0</span></p>
+      <button onclick="clearCart()">Clear Cart</button>
+    </div>
+    <div class="popup" id="popup">
+      <p>Thank you for shopping 🛍️</p>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
