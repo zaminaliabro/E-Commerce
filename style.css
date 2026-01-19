@@ -229,3 +229,103 @@ body {
     width: 200px;
   }
 }
+/* Menu inside navbar */
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: #0a7cff;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer .footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .footer-links a {
+  text-decoration: none;
+  color: #0a7cff;
+  font-weight: 500;
+}
+
+.footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Navbar Menu */
+@media (max-width: 768px) {
+  .navbar .menu {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar .menu li {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 10px;
+  }
+
+  .footer .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* Hamburger (only on small screens) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Menu for small screens is hidden by default */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+    background: #111;
+    padding: 10px 0;
+  }
+
+  .navbar .menu.show {
+    display: flex;
+  }
+
+  .navbar .menu li {
+    margin: 8px 0;
+    text-align: center;
+  }
+}

@@ -32,6 +32,10 @@ function createConfetti() {
     });
   }
 }
+function toggleMenu() {
+  const menu = document.querySelector(".navbar .menu");
+  menu.classList.toggle("show");
+}
 
 function drawConfetti() {
   ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);

@@ -18,12 +18,44 @@
     <nav class="navbar">
       <h2 class="logo">ShopNow</h2>
 
-      <input type="text" id="search" placeholder="Search products..." />
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
 
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <input type="text" id="search" placeholder="Search products..." />
       <div class="cart-btn" onclick="toggleCart()">
         🛒 <span id="cartCount">0</span>
       </div>
     </nav>
+
+    <section class="products" id="products"></section>
+
+    <div class="cart" id="cart">
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <p class="total">Total: Rs <span id="total">0</span></p>
+      <button onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <div class="popup" id="popup">
+      <p>Thank you for shopping 🛍️</p>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <footer class="footer">
+      <p>&copy; 2026 ShopNow. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
 
     <section class="products" id="products"></section>
 
